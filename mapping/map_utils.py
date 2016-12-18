@@ -68,36 +68,20 @@ def map_WT(group_name, readfile_path, n_threads, temp_folder):
 
     os.system(bowtie_cmd)
 
-def map_all_ref(group_name, read_path, n_threads):
-    temp_folder = os.path.join(SCRIPTDIR, '../temp')
-    os.mkdir(temp_folder)
-
-    group_sam_folder = os.path.join(SCRIPTDIR, '../sam/', group_name)
-    os.mkdir(group_sam_folder)
-
+def map_sample(group_name, read_path, n_threads):
     map_bacmet(group_name, read_path, n_threads, temp_folder)
     map_RD(group_name, read_path, n_threads, temp_folder)
     map_WT(group_name, read_path, n_threads, temp_folder)
 
+
+def map_group(group_name, read_paths_list, n_threads):
+    temp_folder = os.path.join(SCRIPTDIR, '../temp')
     os.rmdir(temp_folder)
 
+    group_sam_folder = os.path.join(SCRIPTDIR, '../sam/', group_name)
+    os.mkdir(group_sam_folder)
 
-# card_index_path="$1"
-# sample="$3"
-# merged_sample_path="$4"
-# group_name="$5"
-# map_card="$6"
-# map_bacmet="$7"
+    for read_path in read_paths_list:
+        map_sample(group_name, read_path, n_threads, temp_folder)
 
-# card_sam_path="./sam/$group_name/RD_WT__$sample.sam"
-# bacmet_sam_path="./sam/$group_name/BacMet__$sample.sam"
-
-# if [ "$map_card" == "True" ]; then
-#     bowtie2 -x "$card_index_path" -U "$merged_sample_path" -S "$card_sam_path" -k 1 -p 20 --no-unal;
-# fi
-# if [ "$map_bacmet" == "True" ]; then
-#     ./diamond blastx -d "$bacmet_index_path" -q "$merged_sample_path" -a "./temp/$sample" -e 1e-5 -k 1 -p 20;
-#     ./diamond view -a "./temp/$sample.daa" -o "$bacmet_sam_path" -f sam;
-#     rm "./temp/$sample.daa";
-# fi
-
+    os.rmdir(temp_folder)
