@@ -68,7 +68,7 @@ def map_WT(group_name, readfile_path, n_threads, temp_folder):
 
     os.system(bowtie_cmd)
 
-def map_sample(group_name, read_path, n_threads):
+def map_sample(group_name, read_path, n_threads, temp_folder):
     map_bacmet(group_name, read_path, n_threads, temp_folder)
     map_RD(group_name, read_path, n_threads, temp_folder)
     map_WT(group_name, read_path, n_threads, temp_folder)
@@ -76,7 +76,7 @@ def map_sample(group_name, read_path, n_threads):
 
 def map_group(group_name, read_paths_list, n_threads):
     temp_folder = os.path.join(SCRIPTDIR, '../temp')
-    os.rmdir(temp_folder)
+    os.mkdir(temp_folder)
 
     group_sam_folder = os.path.join(SCRIPTDIR, '../sam/', group_name)
     os.mkdir(group_sam_folder)
