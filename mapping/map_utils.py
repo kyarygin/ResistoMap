@@ -14,7 +14,7 @@ def map_bacmet(group_name, readfile_path, n_threads, temp_folder):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
     daa_file_path = os.path.join(temp_folder, '{}.daa'.format(sample_name))
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, '{}.BacMet.sam'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'BacMet.{}.sam'.format(sample_name))
 
     blastx_cmd = '{diamond_path} blastx -d {index} -q {reads} -a {daa} -e 1e-5 -k 1 -p {n_threads}'
     blastx_cmd = blastx_cmd.format(
@@ -39,7 +39,7 @@ def map_bacmet(group_name, readfile_path, n_threads, temp_folder):
 def map_RD(group_name, readfile_path, n_threads, temp_folder):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, '{}.RD.sam'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'RD.{}.sam'.format(sample_name))
 
     bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal'
     bowtie_cmd = bowtie_cmd.format(
@@ -55,7 +55,7 @@ def map_RD(group_name, readfile_path, n_threads, temp_folder):
 def map_WT(group_name, readfile_path, n_threads, temp_folder):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, '{}.WT.sam'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'WT.{}.sam'.format(sample_name))
 
     bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal'
     bowtie_cmd = bowtie_cmd.format(
