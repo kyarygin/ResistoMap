@@ -6,15 +6,15 @@ BACMET_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/BacMet/BacMet_EXP.dmn
 RD_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/resistance_determinants/RD')
 WT_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/resistance_mutations/WT')
 
-with open(os.path.join(SCRIPTDIR, '../config.json')) as f:
+with open(os.path.join(SCRIPTDIR, '../../config.json')) as f:
     EXEC_PATHES = json.load(f)
 
 
-def map_bacmet(group_name, readfile_path, n_threads, temp_folder):
+def map_bacmet(readfile_path, n_threads):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
-    daa_file_path = os.path.join(temp_folder, '{}.daa'.format(sample_name))
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'BacMet.{}.sam'.format(sample_name))
+    daa_file_path = os.path.join(SCRIPTDIR, '../temp/', '{}.daa'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'BacMet.{}.sam'.format(sample_name))
     log_file_path = os.path.join(SCRIPTDIR, '../logs/', 'BacMet.mapping.{}.log'.format(sample_name))
 
     blastx_cmd = '{diamond_path} blastx -d {index} -q {reads} -a {daa} -e 1e-5 -k 1 -p {n_threads} > {log}'
@@ -40,13 +40,13 @@ def map_bacmet(group_name, readfile_path, n_threads, temp_folder):
     os.system(view_cmd)
     os.remove(daa_file_path)
 
-def map_RD(group_name, readfile_path, n_threads, temp_folder):
+def map_RD(readfile_path, n_threads):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'RD.{}.sam'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'RD.{}.sam'.format(sample_name))
     log_file_path = os.path.join(SCRIPTDIR, '../logs/', 'RD.mapping.{}.log'.format(sample_name))
 
-    bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal > {log}'
+    bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal > {log} 2>{log}'
     bowtie_cmd = bowtie_cmd.format(
         bowtie_path=EXEC_PATHES['bowtie2'],
         index=RD_INDEX_PATH,
@@ -58,13 +58,13 @@ def map_RD(group_name, readfile_path, n_threads, temp_folder):
 
     os.system(bowtie_cmd)
 
-def map_WT(group_name, readfile_path, n_threads, temp_folder):
+def map_WT(readfile_path, n_threads):
     readfile_name = os.path.basename(readfile_path)
     sample_name, ext = os.path.splitext(readfile_name)
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', group_name, 'WT.{}.sam'.format(sample_name))
+    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'WT.{}.sam'.format(sample_name))
     log_file_path = os.path.join(SCRIPTDIR, '../logs/', 'WT.mapping.{}.log'.format(sample_name))
 
-    bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal > {log}'
+    bowtie_cmd = '{bowtie_path} -x {index} -U {reads} -S {sam} -k 1 -p {n_threads} --no-unal > {log} 2>{log}'
     bowtie_cmd = bowtie_cmd.format(
         bowtie_path=EXEC_PATHES['bowtie2'],
         index=WT_INDEX_PATH,
@@ -76,20 +76,7 @@ def map_WT(group_name, readfile_path, n_threads, temp_folder):
 
     os.system(bowtie_cmd)
 
-def map_sample(group_name, read_path, n_threads, temp_folder):
-    map_bacmet(group_name, read_path, n_threads, temp_folder)
-    map_RD(group_name, read_path, n_threads, temp_folder)
-    map_WT(group_name, read_path, n_threads, temp_folder)
-
-
-def map_group(group_name, read_paths_list, n_threads):
-    temp_folder = os.path.join(SCRIPTDIR, '../temp')
-    os.mkdir(temp_folder)
-
-    group_sam_folder = os.path.join(SCRIPTDIR, '../sam/', group_name)
-    os.mkdir(group_sam_folder)
-
-    for read_path in read_paths_list:
-        map_sample(group_name, read_path, n_threads, temp_folder)
-
-    os.rmdir(temp_folder)
+def map_sample(readfile_path, n_threads):
+    map_bacmet(readfile_path, n_threads)
+    map_RD(readfile_path, n_threads)
+    map_WT(readfile_path, n_threads)
