@@ -22,14 +22,14 @@ def analize_RD_sam(sample_name, n_reads):
         gene_id = sam_record.reference_name
         rd_read_count[gene_id] += 1
 
-    rd_rpkm_antibiotic = defaultdict(float)
-    rd_rpkm_gene = defaultdict(lambda: defaultdict(float))
+    rd_arai_antibiotic = defaultdict(float)
+    rd_arai_gene = defaultdict(lambda: defaultdict(float))
 
     for gene_id, count in rd_read_count.items():
         length = gene_length[gene_id]
         antibiotics = aro.gene_id_to_antibiotics(gene_id)
         for antibiotic in antibiotics:
-            rd_rpkm_antibiotic[antibiotic] += 1.*count / length / n_reads
-            rd_rpkm_gene[antibiotic][short_gene_id(gene_id)] += 1.*count / length / n_reads
+            rd_arai_antibiotic[antibiotic] += 1.*count / length / n_reads
+            rd_arai_gene[antibiotic][short_gene_id(gene_id)] += 1.*count / length / n_reads
 
-    return rd_rpkm_antibiotic, rd_rpkm_gene
+    return rd_arai_antibiotic, rd_arai_gene
