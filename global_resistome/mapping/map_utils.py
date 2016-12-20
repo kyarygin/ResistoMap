@@ -3,8 +3,8 @@ import os
 
 SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 BACMET_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/BacMet/BacMet_EXP.dmnd')
-RD_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/resistance_determinants/RD')
-WT_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/resistance_mutations/WT')
+RD_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/RD/RD')
+WT_INDEX_PATH = os.path.join(SCRIPTDIR, '../references/WT/WT')
 
 with open(os.path.join(SCRIPTDIR, '../../config.json')) as f:
     EXEC_PATHES = json.load(f)
