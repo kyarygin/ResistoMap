@@ -3,7 +3,7 @@ import json
 import re
 import os
 
-scriptdir = os.path.dirname(os.path.realpath(__file__))
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 
 relations = [
     'confers_resistance_to',
@@ -20,7 +20,7 @@ class Ontology(dict):
     def __init__(self):
         dict.__init__(self)
 
-    def initialize(self, obo_file_path = os.path.join(scriptdir, 'data/aro.obo')):
+    def initialize(self, obo_file_path = os.path.join(SCRIPTDIR, 'aro.obo')):
         chunks = [[]]
         with open(obo_file_path) as f:
             for line in f:
@@ -84,10 +84,10 @@ class Ontology(dict):
         antibiotic_molecules_ids = set(x for x in all_is_a_part_of_conferation_ids if 'is_a' in self[x] and 'ARO:1000003' in self[x]['is_a'])
         return [self[x]['name'][0] for x in antibiotic_molecules_ids]
 
-    def get_upper_item(self, aro_id):
-        parent_aro_ids = self[aro_id]['is_a']
-        parent_names = [self[aro_id]['name'][0] for aro_id in parent_aro_ids]
-        return parent_names
+    def get_antibiotics_names_by_gene_id(self, gene_id):
+        aro_id = re.search('ARO:\d+', gene_id).group(0)
+        antibiotics = self.get_antibiotics_names(aro_id)
+        return antibiotics
 
 if __name__ == '__main__':
     aro = AROntology()
