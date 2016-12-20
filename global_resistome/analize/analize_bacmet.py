@@ -21,7 +21,7 @@ def load_bacmet_fasta():
 
     return output
 
-def parse_bacmet_sam(sample_name, n_reads):
+def analize_bacmet_sam(sample_name, n_reads):
     bacmet_data = load_bacmet_fasta()
 
     sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'BacMet.{}.sam'.format(sample_name))
