@@ -32,7 +32,7 @@ def parse_bacmet_sam(sample_name, n_reads):
         gene_id = sam_record.reference_name
         counts[gene_id] += 1
 
-    rpkms = {gene_id: 1.*count/n_reads/bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
+    rpkms = {gene_id: 1. * count / n_reads / bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
     bm_rpkm_substance = {'Biocides': 0., 'Metals': 0.}
     bm_rpkm_gene = {'Biocides': defaultdict(float), 'Metals': defaultdict(float)}
     for gene_id, rpkm in rpkms.items():
