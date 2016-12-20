@@ -3,6 +3,6 @@ from Bio import SeqIO
 def count_reads(readfile_path):
     n_reads = 0
     for record in SeqIO.parse(readfile_path, 'fastq'):
-        n_reads += 0
+        n_reads += 1
     return n_reads
 
