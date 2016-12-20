@@ -5,7 +5,7 @@ from Bio.Seq import Seq
 gene_snp = get_gene_snp()
 
 
-def analyze_sam_record(sam_record):
+def extract_snp_data(sam_record):
     s_pos = sam_record.pos
     e_pos = s_pos + sam_record.query_length - 1
     s_pos_n = ((s_pos-1)//3 + 1) * 3
