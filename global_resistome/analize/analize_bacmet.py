@@ -1,6 +1,5 @@
 from collections import defaultdict
 from Bio import SeqIO
-import pysam
 import os
 import re
 
@@ -28,9 +27,11 @@ def parse_bacmet_sam(sample_name, n_reads):
     sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'BacMet.{}.sam'.format(sample_name))
 
     counts = defaultdict(int)
-    for sam_record in pysam.AlignmentFile(samfile_path):
-        gene_id = sam_record.reference_name
-        counts[gene_id] += 1
+    with open(sam_file_path) as f:
+        reader = (line.strip().split('\t') for line in f if not line.startswith('@'))
+        for record in reader:
+            gene_id = record[2]
+            counts[gene_id] += 1
 
     rpkms = {gene_id: 1. * count / n_reads / bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
     bm_rpkm_substance = {'Biocides': 0., 'Metals': 0.}
