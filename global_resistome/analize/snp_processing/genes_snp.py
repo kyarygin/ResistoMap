@@ -2,7 +2,9 @@ from collections import namedtuple, defaultdict
 from itertools import count
 from Bio import SeqIO
 import os
-scriptdir = os.path.dirname(os.path.realpath(__file__))
+
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
+GENE_NAMES = ['folP', 'gyrA', 'gyrB', 'parC', 'parE', 'rpoB']
 
 def load_snp_table(snp_table_path):
     headers = ['gene_name', 'pos', 'ref', 'alt', 'antibiotic', 'cite_ref']
@@ -17,7 +19,7 @@ def load_snp_table(snp_table_path):
 
 def process_aligned_faa(faa_folder, ecoli_genes_id, snp_table):
     gene_snp = {}
-    for gene_name in ['folP', 'gyrA', 'gyrB', 'parC', 'parE', 'rpoB']:
+    for gene_name in GENE_NAMES:
         ecoli_snp = defaultdict(list)
         pos_to_antibiotic = defaultdict(list)
         for rec in snp_table:
@@ -44,13 +46,13 @@ def process_aligned_faa(faa_folder, ecoli_genes_id, snp_table):
 
 
 def get_gene_snp():
-    ecoli_genes_path = os.path.join(scriptdir, './data/ecoli_genes.csv')
+    ecoli_genes_path = os.path.join(SCRIPTDIR, './data/ecoli_genes.csv')
     with open(ecoli_genes_path) as f:
         ecoli_genes_id = dict(line.strip().split(',') for line in f)
 
-    snp_table_path = os.path.join(scriptdir, './data/AR_SNP_table.csv')
+    snp_table_path = os.path.join(SCRIPTDIR, './data/AR_SNP_table.csv')
     snp_table = load_snp_table(snp_table_path)
-    aligned_faa_path = os.path.join(scriptdir, './data/aligned_faa/')
+    aligned_faa_path = os.path.join(SCRIPTDIR, './data/aligned_faa/')
     gene_snp = process_aligned_faa(aligned_faa_path, ecoli_genes_id, snp_table)
 
     return gene_snp
