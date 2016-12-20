@@ -1,3 +1,4 @@
+from global_resistome.utils.utils import short_gene_id
 from collections import defaultdict
 from Bio import SeqIO
 import os
@@ -38,6 +39,6 @@ def analize_bacmet_sam(sample_name, n_reads):
     bm_rpkm_gene = {'Biocides': defaultdict(float), 'Metals': defaultdict(float)}
     for gene_id, rpkm in rpkms.items():
         bm_rpkm_substance[bacmet_data[gene_id]['set']] += rpkm
-        bm_rpkm_gene[bacmet_data[gene_id]['set']][gene_id] += rpkm
+        bm_rpkm_gene[bacmet_data[gene_id]['set']][short_gene_id(gene_id)] += rpkm
 
     return bm_rpkm_substance, bm_rpkm_gene
