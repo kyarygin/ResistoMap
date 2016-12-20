@@ -1,5 +1,8 @@
 from global_resistome.main import main
 import argparse
+import os
+
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -11,5 +14,7 @@ if __name__ == '__main__':
 
     read_files = args['read_file']
     n_threads = args['n_threads']
+
+    read_files = [os.path.join(SCRIPTDIR, x) for x in read_files]
 
     main(read_files, n_threads)
