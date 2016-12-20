@@ -34,11 +34,11 @@ def analize_bacmet_sam(sample_name, n_reads):
             gene_id = record[2]
             counts[gene_id] += 1
 
-    rpkms = {gene_id: 1. * count / n_reads / bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
-    bm_rpkm_substance = {'Biocides': 0., 'Metals': 0.}
-    bm_rpkm_gene = {'Biocides': defaultdict(float), 'Metals': defaultdict(float)}
-    for gene_id, rpkm in rpkms.items():
-        bm_rpkm_substance[bacmet_data[gene_id]['set']] += rpkm
-        bm_rpkm_gene[bacmet_data[gene_id]['set']][short_gene_id(gene_id)] += rpkm
+    arais = {gene_id: 1. * count / n_reads / bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
+    bm_arai_substance = {'Biocides': 0., 'Metals': 0.}
+    bm_arai_gene = {'Biocides': defaultdict(float), 'Metals': defaultdict(float)}
+    for gene_id, arai in arais.items():
+        bm_arai_substance[bacmet_data[gene_id]['set']] += arai
+        bm_arai_gene[bacmet_data[gene_id]['set']][short_gene_id(gene_id)] += arai
 
-    return bm_rpkm_substance, bm_rpkm_gene
+    return bm_arai_substance, bm_arai_gene
