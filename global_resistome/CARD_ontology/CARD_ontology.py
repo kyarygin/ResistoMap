@@ -84,7 +84,7 @@ class Ontology(dict):
         antibiotic_molecules_ids = set(x for x in all_is_a_part_of_conferation_ids if 'is_a' in self[x] and 'ARO:1000003' in self[x]['is_a'])
         return [self[x]['name'][0] for x in antibiotic_molecules_ids]
 
-    def get_antibiotics_names_by_gene_id(self, gene_id):
+    def gene_id_to_antibiotics(self, gene_id):
         aro_id = re.search('ARO:\d+', gene_id).group(0)
         antibiotics = self.get_antibiotics_names(aro_id)
         return antibiotics
