@@ -1,0 +1,213 @@
+embB,294,G,S,Ethambutol,Jain et al. 2008
+embB,306,M,L,Ethambutol,Sreevatsan et al. 1997
+embB,306,M,V,Ethambutol,Sreevatsan et al. 1997
+embB,306,M,I,Ethambutol,Sreevatsan et al. 1997
+embB,406,G,S,Ethambutol,Ramaswamy et al. 2000
+embB,406,G,D,Ethambutol,Ramaswamy et al. 2000
+embB,423,M,I,Ethambutol,Lee et al. 2004
+embB,497,Q,R,Ethambutol,Ramaswamy et al. 2000
+embB,745,G,D,Ethambutol,Ramaswamy et al. 2000
+folP,28,F,I,Sulfonamides,Swedberg et al. 1993
+folP,28,F,L,Sulfonamides,Fermer et al. 1995
+folP,64,P,S,Sulfonamides,Vedantam et al. 1998
+gyrA,67,A,S,Fluoroquinolones,Piddock 1999
+gyrA,67,A,P,Fluoroquinolones,Piddock 1999
+gyrA,67,A,T,Fluoroquinolones,Piddock 1999
+gyrA,67,A,S,Fluoroquinolones,Shi et al. 2006
+gyrA,72,D,G,Fluoroquinolones,Piddock 1999
+gyrA,81,G,V,Fluoroquinolones,Piddock 1999
+gyrA,81,G,C,Fluoroquinolones,Piddock 1999
+gyrA,81,G,D,Fluoroquinolones,Piddock 1999
+gyrA,81,G,S,Fluoroquinolones,Piddock 1999
+gyrA,81,G,A,Fluoroquinolones,Matrat et al. 2006
+gyrA,82,D,N,Fluoroquinolones,Von Groll et al. 2009
+gyrA,83,S,L,Fluoroquinolones,Piddock 1999
+gyrA,83,S,I,Fluoroquinolones,Piddock 1999
+gyrA,83,S,Y,Fluoroquinolones,Piddock 1999
+gyrA,83,S,F,Fluoroquinolones,Piddock 1999
+gyrA,83,S,W,Fluoroquinolones,Piddock 1999
+gyrA,83,S,A,Fluoroquinolones,Piddock 1999
+gyrA,83,S,V,Fluoroquinolones,Piddock 1999
+gyrA,83,S,R,Fluoroquinolones,Piddock 1999
+gyrA,83,S,N,Fluoroquinolones,Piddock 1999
+gyrA,83,T,I,Fluoroquinolones,Piddock 1999
+gyrA,83,T,F,Fluoroquinolones,Piddock 1999
+gyrA,83,T,K,Fluoroquinolones,Piddock 1999
+gyrA,83,N,K,Fluoroquinolones,Piddock 1999
+gyrA,83,A,V,Fluoroquinolones,Takiff et al. 1994
+gyrA,83,A,V,Fluoroquinolones,Piddock 1999
+gyrA,83,A,P,Fluoroquinolones,Piddock 1999
+gyrA,84,A,P,Fluoroquinolones,Piddock 1999
+gyrA,84,S,P,Fluoroquinolones,Piddock 1999
+gyrA,84,A,V,Fluoroquinolones,Piddock 1999
+gyrA,84,S,P,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,H,Fluoroquinolones,Piddock 1999
+gyrA,87,D,G,Fluoroquinolones,Piddock 1999
+gyrA,87,D,V,Fluoroquinolones,Piddock 1999
+gyrA,87,D,A,Fluoroquinolones,Piddock 1999
+gyrA,87,D,N,Fluoroquinolones,Piddock 1999
+gyrA,87,D,T,Fluoroquinolones,Piddock 1999
+gyrA,87,D,Y,Fluoroquinolones,Piddock 1999
+gyrA,87,D,F,Fluoroquinolones,Piddock 1999
+gyrA,87,D,S,Fluoroquinolones,Piddock 1999
+gyrA,87,D,K,Fluoroquinolones,Piddock 1999
+gyrA,87,E,G,Fluoroquinolones,Piddock 1999
+gyrA,87,E,K,Fluoroquinolones,Piddock 1999
+gyrA,87,D,N,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,H,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,F,Fluoroquinolones,Bravo et al. 2009
+gyrA,87,D,Y,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,G,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,A,Fluoroquinolones,Takiff et al. 1994
+gyrA,87,D,V,Fluoroquinolones,Sulochana et al. 2007
+gyrA,87,E,G,Fluoroquinolones,Piddock 1999
+gyrA,93,A,V,Fluoroquinolones,Piddock 1999
+gyrA,106,Q,H,Fluoroquinolones,Piddock 1999
+gyrA,106,Q,R,Fluoroquinolones,Piddock 1999
+gyrA,106,Q,L,Fluoroquinolones,Takenouchi et al. 1999
+gyrA,119,A,E,Fluoroquinolones,Piddock 1999
+gyrA,119,A,V,Fluoroquinolones,Griggs et al. 1996
+gyrA,119,A,R,Fluoroquinolones,Maruri et al. 2012
+gyrB,48,I,S,Coumarin,Fujimoto-Nakamura et al. 2005
+gyrB,77,G,S,Coumarin,Fujimoto-Nakamura et al. 2005
+gyrB,94,I,S,Coumarin,Fournier and Hooper 1998
+gyrB,120,S,L,Coumarin,Mun˜oz et al. 1995
+gyrB,136,R,C,Coumarin,Contreras and Maxwell 1992
+gyrB,136,R,H,Coumarin,Contreras and Maxwell 1992
+gyrB,136,R,S,Coumarin,Contreras and Maxwell 1992
+gyrB,136,R,I,Coumarin,Fournier and Hooper 1998
+gyrB,136,R,L,Coumarin,Maxwell 1993
+gyrB,136,R,Q,Coumarin,Battisti et al. 1998
+gyrB,164,G,V,Coumarin,Contreras and Maxwell 1992; Maxwell 1993
+gyrB,165,T,A,Coumarin,Battisti et al. 1998; Fujimoto-Nakamura et al. 2005
+gyrB,165,T,I,Coumarin,Battisti et al. 1998
+gyrB,218,Y,C,Coumarin,Pridgeon et al. 2013b
+gyrB,426,D,N,Fluoroquinolones,Piddock 1999
+gyrB,445,P,S,Fluoroquinolones,Piddock 1999
+gyrB,447,K,E,Fluoroquinolones,Piddock 1999
+gyrB,447,R,Q,Fluoroquinolones,Piddock 1999
+gyrB,464,S,Y,Fluoroquinolones,Piddock 1999
+gyrB,465,E,K,Fluoroquinolones,Piddock 1999
+gyrB,788,R,S,Coumarin,Pridgeon et al. 2013a
+gyrB,78,G,C,Fluoroquinolones,Piddock 1999
+parC,79,D,N,Fluoroquinolones,Piddock 1999
+parC,80,S,Y,Fluoroquinolones,Piddock 1999
+parC,80,S,F,Fluoroquinolones,Piddock 1999
+parC,80,S,R,Fluoroquinolones,Piddock 1999
+parC,80,S,I,Fluoroquinolones,Piddock 1999
+parC,80,S,L,Fluoroquinolones,Piddock 1999
+parC,80,S,P,Fluoroquinolones,Piddock 1999
+parC,81,S,P,Fluoroquinolones,Piddock 1999
+parC,84,E,K,Fluoroquinolones,Piddock 1999
+parC,84,E,G,Fluoroquinolones,Piddock 1999
+parC,84,E,A,Fluoroquinolones,Piddock 1999
+parC,84,E,V,Fluoroquinolones,Fa`brega et al. 2009
+parC,84,D,G,Fluoroquinolones,Piddock 1999
+parC,84,D,H,Fluoroquinolones,Piddock 1999
+parC,117,A,E,Fluoroquinolones,Piddock 1999
+parC,117,A,P,Fluoroquinolones,Piddock 1999
+parE,132,R,C,Coumarin,Hardy and Cozzarelli 2003
+parE,408,D,V,Fluoroquinolones,Piddock 1999
+parE,420,D,N,Fluoroquinolones,Piddock 1999
+parE,439,P,S,Fluoroquinolones,Piddock 1999
+parE,445,L,H,Fluoroquinolones,Piddock 1999
+parE,446,N,D,Fluoroquinolones,Piddock 1999
+rpoB,146,V,F,Rifampin,Heep et al. 2000; Siu et al. 2011
+rpoB,194,V,I,Rifampin,Daum et al. 2012
+rpoB,381,A,V,Rifampin,Taniguchi et al. 1996
+rpoB,490,Q,H,Rifampin,Cavusoglu et al. 2002
+rpoB,504,E,A,Rifampin,Schilke et al. 1999
+rpoB,505,F,L,Rifampin,Heym et al. 1994; Stavrum et al. 2009
+rpoB,505,F,S,Rifampin,Wang et al. 2007
+rpoB,507,G,S,Rifampin,Bahrmand et al. 2009
+rpoB,507,G,D,Rifampin,Kim et al. 1997; Bahrmand et al. 2009
+rpoB,508,T,H,Rifampin,Bahrmand et al. 2009
+rpoB,508,T,P,Rifampin,Bahrmand et al. 2009
+rpoB,509,S,Q,Rifampin,Zenteno-Cuevas et al. 2009
+rpoB,509,S,T,Rifampin,Williams et al. 1994
+rpoB,509,S,R,Rifampin,Sekiguchi et al. 2007
+rpoB,510,Q,H,Rifampin,Sajduda et al. 2004
+rpoB,510,Q,L,Rifampin,Zenteno-Cuevas et al. 2009
+rpoB,511,L,P,Rifampin,Kapur et al. 1994
+rpoB,511,L,R,Rifampin,Kapur et al. 1994
+rpoB,511,L,V,Rifampin,Siddiqi et al. 2002
+rpoB,512,S,T,Rifampin,Kapur et al. 1994
+rpoB,512,S,I,Rifampin,Sajduda et al. 2004
+rpoB,512,S,R,Rifampin,Ramaswamy and Musser 1998
+rpoB,512,S,G,Rifampin,Chan et al. 2007
+rpoB,513,Q,N,Rifampin,Bahrmand et al. 2009
+rpoB,513,Q,L,Rifampin,Kapur et al. 1994
+rpoB,513,Q,K,Rifampin,Kapur et al. 1994
+rpoB,513,Q,E,Rifampin,Prammananan et al. 2008
+rpoB,513,Q,P,Rifampin,Kim et al. 1997
+rpoB,513,Q,H,Rifampin,Valim et al. 2000
+rpoB,513,Q,R,Rifampin,O’Sullivan et al. 2005
+rpoB,514,F,L,Rifampin,Taniguchi et al. 1996
+rpoB,514,F,V,Rifampin,Valim et al. 2000
+rpoB,515,M,I,Rifampin,Ramaswamy and Musser 1998; Sajduda et al. 2004
+rpoB,516,D,N,Rifampin,Schilke et al. 1999
+rpoB,516,D,H,Rifampin,Bahrmand et al. 2009
+rpoB,516,D,V,Rifampin,Kapur et al. 1994
+rpoB,516,D,E,Rifampin,Kapur et al. 1994
+rpoB,516,D,G,Rifampin,Hillemann et al. 2005
+rpoB,516,D,A,Rifampin,Ramaswamy and Musser 1998
+rpoB,516,D,Y,Rifampin,Kapur et al. 1994
+rpoB,516,D,T,Rifampin,Madania et al. 2012
+rpoB,516,D,F,Rifampin,Hillemann et al. 2005
+rpoB,517,Q,H,Rifampin,Wu et al. 2009
+rpoB,517,Q,L,Rifampin,Sajduda et al. 2004
+rpoB,518,N,Y,Rifampin,Wang et al. 2007
+rpoB,518,N,T,Rifampin,Siddiqi et al. 2002
+rpoB,518,N,I,Rifampin,Hillemann et al. 2005
+rpoB,518,N,H,Rifampin,Kim et al. 1997
+rpoB,518,N,D,Rifampin,Chan et al. 2007
+rpoB,519,N,K,Rifampin,Bahrmand et al. 2009
+rpoB,521,L,M,Rifampin,Ramaswamy and Musser 1998
+rpoB,521,L,P,Rifampin,Taniguchi et al. 1996
+rpoB,522,S,L,Rifampin,Bodmer et al. 1995
+rpoB,522,S,Q,Rifampin,Yuen et al. 1999
+rpoB,522,S,W,Rifampin,O’Sullivan et al. 2005
+rpoB,523,G,W,Rifampin,Pozzi et al. 1999; El Baghdadi et al. 2003
+rpoB,523,G,A,Rifampin,Bahrmand et al. 2009
+rpoB,524,L,W,Rifampin,Valim et al. 2000
+rpoB,524,L,S,Rifampin,Zenteno-Cuevas et al. 2009
+rpoB,525,T,P,Rifampin,Valim et al. 2000
+rpoB,525,T,I,Rifampin,Pozzi et al. 1999
+rpoB,526,H,F,Rifampin,Bahrmand et al. 2009
+rpoB,526,H,N,Rifampin,Ramaswamy et al. 2004
+rpoB,526,H,D,Rifampin,Kapur et al. 1994
+rpoB,526,H,Y,Rifampin,Kapur et al. 1994
+rpoB,526,H,T,Rifampin,Ramaswamy and Musser 1998
+rpoB,526,H,S,Rifampin,Prammananan et al. 2008
+rpoB,526,H,G,Rifampin,Ramaswamy and Musser 1998
+rpoB,526,H,C,Rifampin,Kim et al. 1997
+rpoB,526,H,R,Rifampin,Kim et al. 1997
+rpoB,526,H,P,Rifampin,Bodmer et al. 1995
+rpoB,526,H,L,Rifampin,Kapur et al. 1994; Valim et al. 2000; Sheng et al. 2008
+rpoB,526,H,Q,Rifampin,Kapur et al. 1994; Bodmer et al. 1995
+rpoB,527,K,N,Rifampin,Siddiqi et al. 2002
+rpoB,527,K,Q,Rifampin,Williams et al. 1994
+rpoB,528,R,H,Rifampin,Siddiqi et al. 2002
+rpoB,528,R,P,Rifampin,Siddiqi et al. 2002; Zenteno-Cuevas et al. 2009
+rpoB,531,S,Q,Rifampin,Ramaswamy and Musser 1998
+rpoB,531,S,L,Rifampin,Donnabella et al. 1994
+rpoB,531,S,W,Rifampin,Bodmer et al. 1995
+rpoB,531,S,Y,Rifampin,Bodmer et al. 1995
+rpoB,531,S,F,Rifampin,Hillemann et al. 2005
+rpoB,531,S,C,Rifampin,Ramaswamy and Musser 1998
+rpoB,531,S,G,Rifampin,Madania et al. 2012
+rpoB,533,L,P,Rifampin,Moghazeh et al. 1996; Valim et al. 2000
+rpoB,535,P,S,Rifampin,Tracevska et al. 2002
+rpoB,535,P,H,Rifampin,Prammananan et al. 2008
+rpoB,538,L,P,Rifampin,Wang et al. 2007
+rpoB,541,E,G,Rifampin,Pozzi et al. 1999; Prammananan et al. 2008
+rpoB,545,L,M,Rifampin,Aslan et al. 2008
+rpoB,553,S,A,Rifampin,Pozzi et al. 1999
+rpoB,561,I,V,Rifampin,Ramaswamy et al. 2004
+rpoB,561,I,T,Rifampin,Heep et al. 2001
+rpoB,562,E,G,Rifampin,Hauck et al. 2009
+rpoB,564,P,L,Rifampin,Hauck et al. 2009
+rpoB,571,L,V,Rifampin,Heep et al. 2001
+rpoB,572,I,F,Rifampin,Yuen et al. 1999; Madania et al. 2012
+rpoB,574,S,L,Rifampin,Chan et al. 2007
+rpoB,672,E,D,Rifampin,Heep et al. 2001
