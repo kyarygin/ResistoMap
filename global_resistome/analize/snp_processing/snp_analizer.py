@@ -1,5 +1,5 @@
+from global_resistome.analize.snp_processing.genes_snp import get_gene_snp
 from collections import defaultdict
-from genes_snp import get_gene_snp
 from Bio.Seq import Seq
 
 gene_snp = get_gene_snp()
