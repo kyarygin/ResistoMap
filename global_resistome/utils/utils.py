@@ -9,3 +9,6 @@ def count_reads(readfile_path):
 
 def short_gene_id(gene_id):
     return re.search('.*\|([^\|]+)$', gene_id).group(1)
+
+def normalize_name(antibiotic):
+    return antibiotic.replace(' antibiotic', '').capitalize()
