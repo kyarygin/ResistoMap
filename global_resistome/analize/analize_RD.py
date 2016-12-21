@@ -1,4 +1,4 @@
-from global_resistome.CARD_ontology.CARD_ontology import Ontology
+from global_resistome.analize.CARD_ontology.CARD_ontology import Ontology
 from global_resistome.utils.utils import short_gene_id, normalize_name
 from collections import defaultdict
 from Bio import SeqIO
