@@ -7,7 +7,7 @@ from src.analize.analize_WT import analize_WT_sam
 import pandas as pd
 import os
 
-def concat_tables(root_path):
+def concat_tables(output_folder, root_path):
     tables_names = os.listdir(os.path.join(root_path, 'src', 'output'))
     gene_tables_names = [x for x in tables_names if x.startswith('gene_table')]
     ab_tables_names = [x for x in tables_names if x.startswith('ab_table')]
@@ -22,9 +22,9 @@ def concat_tables(root_path):
         ab_table = pd.read_csv(os.path.join(root_path, 'src', 'output', table_name), sep='\t')
         ab_table_total = pd.concat([ab_table_total, ab_table])
 
-    with open(os.path.join(root_path, 'gene_table_total.tsv'), 'w') as f:
+    with open(os.path.join(output_folder, 'gene_table_total.tsv'), 'w') as f:
         gene_table_total.to_csv(f, sep='\t', index=False, float_format='%.2e')
-    with open(os.path.join(root_path, 'ab_table_total.tsv'), 'w') as f:
+    with open(os.path.join(output_folder, 'ab_table_total.tsv'), 'w') as f:
         ab_table_total.to_csv(f, sep='\t', index=False, float_format='%.2e')
 
 def process_readfile(readfile_path, n_threads, root_path):
@@ -54,7 +54,7 @@ def process_readfile(readfile_path, n_threads, root_path):
     with open(os.path.join(root_path, 'src', 'output', 'gene_table.{}.tsv'.format(sample_name)), 'w') as f:
         gene_table.to_csv(f, sep='\t', index=False, float_format='%.2e')
 
-def main(readfile_paths, n_threads, root_path):
+def main(readfile_paths, n_threads, output_folder, root_path):
     temp_folders = ['sam', 'logs', 'daa', 'output']
     for folder_name in temp_folders:
         delete_folder(os.path.join(root_path, 'src', folder_name))
@@ -64,7 +64,7 @@ def main(readfile_paths, n_threads, root_path):
         print('Processing {} ...'.format(os.path.basename(readfile_path)))
         process_readfile(readfile_path, n_threads, root_path)
 
-    concat_tables(root_path)
+    concat_tables(output_folder, root_path)
 
     for folder_name in temp_folders:
         delete_folder(os.path.join(root_path, 'src', folder_name))
