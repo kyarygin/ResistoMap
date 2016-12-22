@@ -1,5 +1,4 @@
 from collections import defaultdict
-import json
 import re
 import os
 
@@ -88,10 +87,3 @@ class Ontology(dict):
         aro_id = re.search('ARO:\d+', gene_id).group(0)
         antibiotics = self.get_antibiotics_names(aro_id)
         return antibiotics
-
-
-if __name__ == '__main__':
-    aro = AROntology()
-    aro.initialize()
-    print(json.dumps(aro, sort_keys=True, indent=4))
-    # print aro['ARO:3002999']['name'], aro.get_antibiotics_names('ARO:3002999')

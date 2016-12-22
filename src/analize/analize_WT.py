@@ -24,12 +24,12 @@ def parse_WT_sam(sam_file_path, gene_info):
     return wt_read_count, wt_snp_count
 
 
-def analize_WT_sam(sample_name, n_reads):
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'WT.{}.sam'.format(sample_name))
+def analize_WT_sam(sample_name, n_reads, root_path):
+    sam_file_path = os.path.join(root_path, 'src', 'sam', 'WT.{}.sam'.format(sample_name))
     gene_info = defaultdict(lambda: defaultdict())
 
     for gene_name in GENE_NAMES:
-        WT_fasta_path = os.path.join(SCRIPTDIR, '../fasta/WT/%s.ffn' % gene_name)
+        WT_fasta_path = os.path.join(root_path, 'src', 'fasta', 'WT', '%s.ffn' % gene_name)
         for record in SeqIO.parse(WT_fasta_path, 'fasta'):
             gene_info[record.id]['length'] = len(record)
             gene_info[record.id]['gene_name'] = gene_name

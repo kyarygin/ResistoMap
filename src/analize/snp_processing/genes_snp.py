@@ -46,13 +46,13 @@ def process_aligned_faa(faa_folder, ecoli_genes_id, snp_table):
 
 
 def get_gene_snp():
-    ecoli_genes_path = os.path.join(SCRIPTDIR, './data/ecoli_genes.csv')
+    ecoli_genes_path = os.path.join(SCRIPTDIR, 'data', 'ecoli_genes.csv')
     with open(ecoli_genes_path) as f:
         ecoli_genes_id = dict(line.strip().split(',') for line in f)
 
-    snp_table_path = os.path.join(SCRIPTDIR, './data/AR_SNP_table.csv')
+    snp_table_path = os.path.join(SCRIPTDIR, 'data', 'AR_SNP_table.csv')
     snp_table = load_snp_table(snp_table_path)
-    aligned_faa_path = os.path.join(SCRIPTDIR, './data/aligned_faa/')
+    aligned_faa_path = os.path.join(SCRIPTDIR, 'data', 'aligned_faa')
     gene_snp = process_aligned_faa(aligned_faa_path, ecoli_genes_id, snp_table)
 
     return gene_snp

@@ -5,16 +5,15 @@ from Bio import SeqIO
 import pysam
 import os
 
-SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 TRASH_CATEGORIES = ['Miscellaneous', 'Mixture', 'Acridine dye']
 aro = Ontology()
 aro.initialize()
 
-def analize_RD_sam(sample_name, n_reads):
-    sam_file_path = os.path.join(SCRIPTDIR, '../sam/', 'RD.{}.sam'.format(sample_name))
+def analize_RD_sam(sample_name, n_reads, root_path):
+    sam_file_path = os.path.join(root_path, 'src', 'sam', 'RD.{}.sam'.format(sample_name))
 
     gene_length = {}
-    RD_fasta_path = os.path.join(SCRIPTDIR, '../fasta/RD/CARD_resistance_determinants.fasta')
+    RD_fasta_path = os.path.join(root_path, 'src', 'fasta', 'RD', 'CARD_resistance_determinants.fasta')
     for record in SeqIO.parse(RD_fasta_path, 'fasta'):
         gene_length[record.id] = len(record)
 
