@@ -1,4 +1,4 @@
-from global_resistome.analize.snp_processing.snp_analizer import extract_snp_data
+from src.analize.snp_processing.snp_analizer import extract_snp_data
 from collections import defaultdict
 from Bio import SeqIO
 import pysam

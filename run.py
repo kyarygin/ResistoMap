@@ -1,4 +1,4 @@
-from global_resistome.main import main
+from src.main import main
 import argparse
 import os
 

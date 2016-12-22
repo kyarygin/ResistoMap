@@ -1,4 +1,4 @@
-from global_resistome.utils.utils import short_gene_id
+from src.utils.utils import short_gene_id
 from collections import defaultdict
 from Bio import SeqIO
 import os

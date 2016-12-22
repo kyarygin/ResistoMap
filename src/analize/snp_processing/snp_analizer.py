@@ -1,4 +1,4 @@
-from global_resistome.analize.snp_processing.genes_snp import get_gene_snp
+from src.analize.snp_processing.genes_snp import get_gene_snp
 from collections import defaultdict
 from Bio.Seq import Seq
 

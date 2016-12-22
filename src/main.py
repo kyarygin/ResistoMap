@@ -1,9 +1,9 @@
-from global_resistome.mapping.map_utils import map_sample
-from global_resistome.utils.utils import delete_folder, count_reads
-from global_resistome.utils.utils import substance_dict_to_table, gene_dict_to_table
-from global_resistome.analize.analize_bacmet import analize_bacmet_sam
-from global_resistome.analize.analize_RD import analize_RD_sam
-from global_resistome.analize.analize_WT import analize_WT_sam
+from src.mapping.map_utils import map_sample
+from src.utils.utils import delete_folder, count_reads
+from src.utils.utils import substance_dict_to_table, gene_dict_to_table
+from src.analize.analize_bacmet import analize_bacmet_sam
+from src.analize.analize_RD import analize_RD_sam
+from src.analize.analize_WT import analize_WT_sam
 import pandas as pd
 import os
 
