@@ -12,9 +12,7 @@ if __name__ == '__main__':
                         help='number of bowtie/diamond threads (default: 1)', default=1)
     args = vars(parser.parse_args())
 
-    read_files = args['read_file']
+    read_files_pathes = [os.path.abspath(read_file) for read_file in args['read_file']]
     n_threads = args['n_threads']
 
-    read_files = [os.path.join(SCRIPTDIR, x) for x in read_files]
-
-    main(read_files, n_threads)
+    main(read_files_pathes, n_threads, SCRIPTDIR)
