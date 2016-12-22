@@ -3,7 +3,7 @@ import json
 import re
 import os
 
-scriptdir = os.path.dirname(os.path.realpath(__file__))
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 
 relations = [
     'confers_resistance_to',
@@ -16,13 +16,13 @@ relations = [
     'targeted_by_drug'
 ]
 
-class AROntology(dict):
+class Ontology(dict):
     def __init__(self):
         dict.__init__(self)
 
-    def initialize(self, obo_file_path = os.path.join(scriptdir, 'data/aro.obo')):
+    def initialize(self):
         chunks = [[]]
-        with open(obo_file_path) as f:
+        with open(os.path.join(SCRIPTDIR, 'data', 'aro.obo')) as f:
             for line in f:
                 if line.strip():
                     chunks[-1].append(line.strip())
