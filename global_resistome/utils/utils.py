@@ -16,7 +16,8 @@ def normalize_name(antibiotic):
     return antibiotic.replace(' antibiotic', '').capitalize()
 
 def substance_dict_to_table(rpkm_substance, sample_name):
-    df = pd.DataFrame(rpkm_substance.items(), columns=['category', 'abund'])
+    data = [[antibiotic, abund] for antibiotic, abund in rpkm_substance.items()]
+    df = pd.DataFrame(data, columns=['category', 'abund'])
     df['sample'] = sample_name
     df = df[['category', 'sample', 'abund']]
     return df
