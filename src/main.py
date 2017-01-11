@@ -55,7 +55,7 @@ def process_readfile(readfile_path, n_threads, root_path):
         gene_table.to_csv(f, sep='\t', index=False, float_format='%.2e')
 
 def main(readfile_paths, n_threads, output_folder, root_path):
-    temp_folders = ['sam', 'logs', 'daa', 'output']
+    temp_folders = ['sam', 'logs', 'output']
     for folder_name in temp_folders:
         delete_folder(os.path.join(root_path, 'src', folder_name))
         os.mkdir(os.path.join(root_path, 'src', folder_name))
