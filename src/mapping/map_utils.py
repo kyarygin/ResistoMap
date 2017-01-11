@@ -7,32 +7,20 @@ def map_bacmet(readfile_path, exec_path_diamond, n_threads, root_path):
 
     bacmet_index_path = os.path.join(root_path, 'src', 'references', 'BacMet', 'BacMet_EXP.dmnd')
 
-    daa_file_path = os.path.join(root_path, 'src', 'daa', '{}.daa'.format(sample_name))
     sam_file_path = os.path.join(root_path, 'src', 'sam', 'BacMet.{}.sam'.format(sample_name))
     log_file_path = os.path.join(root_path, 'src', 'logs', 'BacMet.mapping.{}.log'.format(sample_name))
 
-    blastx_cmd = '{diamond_path} blastx -d {index} -q {reads} -a {daa} -e 1e-5 -k 1 -p {n_threads} > {log}'
+    blastx_cmd = '{diamond_path} blastx -d {index} -q {reads} -o {sam} -f 101 -e 1e-5 -k 1 -p {n_threads} > {log}'
     blastx_cmd = blastx_cmd.format(
         diamond_path=exec_path_diamond,
         index=bacmet_index_path,
         reads=readfile_path,
-        daa=daa_file_path,
+        sam=sam_file_path,
         n_threads=n_threads,
         log=log_file_path
     )
 
-    log_file_path = os.path.join(root_path, 'src', 'logs', 'BacMet.view.{}.log'.format(sample_name))
-    view_cmd = '{diamond_path} view -a {daa} -o {sam} -f sam > {log}'
-    view_cmd = view_cmd.format(
-        diamond_path=exec_path_diamond,
-        daa=daa_file_path,
-        sam=sam_file_path,
-        log=log_file_path
-    )
-
     os.system(blastx_cmd)
-    os.system(view_cmd)
-    os.remove(daa_file_path)
 
 def map_RD(readfile_path, exec_path_bowtie2, n_threads, root_path):
     readfile_name = os.path.basename(readfile_path)
