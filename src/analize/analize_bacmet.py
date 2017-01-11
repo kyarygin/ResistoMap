@@ -28,7 +28,8 @@ def analize_bacmet_sam(sample_name, n_reads, root_path):
         reader = (line.strip().split('\t') for line in f if not line.startswith('@'))
         for record in reader:
             gene_id = record[2]
-            counts[gene_id] += 1
+            if gene_id != '*':
+                counts[gene_id] += 1
 
     rpkms = {gene_id: 1. * count / n_reads / bacmet_data[gene_id]['length'] for gene_id, count in counts.items()}
     bm_rpkm_substance = {'Biocides': 0., 'Metals': 0.}
