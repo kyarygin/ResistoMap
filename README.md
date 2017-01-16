@@ -47,5 +47,5 @@ If you miss some sample data, leave NA values in fields, e.g.:
 | O2.UC52-2 | Spain   | Female | NA  | Healthy            |
 | V1.CD15-3 | Spain   | Female | NA  | Crohns disease     |
 
-Calculate abundance tables with scripts and send us metadata table along with _ab_table_total.tsv_, _gene_table_total.tsv_ to [resistomap@gmail.com](mailto:resistomap@gmail.com).
+Calculate abundance tables for samples and send us metadata table along with _ab_table_total.tsv_, _gene_table_total.tsv_ to [resistomap@gmail.com](mailto:resistomap@gmail.com).
 After internal validation, the datasets will be added to the Resistomap together with the information about contributors and reference publication.
